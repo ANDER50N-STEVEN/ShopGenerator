@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DND Shop Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>DND Shop Generator</h1>
+    
+    <label for="location">Select Location:</label>
+    <select id="location">
+        <option value="smallTown">Small Town</option>
+        <option value="largeTown">Large Town</option>
+        <option value="smallCity">Small City</option>
+        <option value="largeCity">Large City</option>
+    </select>
+
+    <label for="shopType">Select Shop Type:</label>
+    <select id="shopType">
+        <option value="generalStore">General Store</option>
+        <option value="magicShop">Magic Shop</option>
+        <option value="blacksmith">Blacksmith</option>
+        <option value="apothecary">Apothecary</option>
+        <option value="tavern">Tavern</option>
+    </select>
+
+    <button onclick="generateShop()">Generate Shop</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    function generateShop() {
+        const location = document.getElementById('location').value;
+        const shopType = document.getElementById('shopType').value;
+        
+        let result = You have selected a ${location} with a ${shopType}.;
+
+        // You can expand this to generate more detailed descriptions or add more features
+        
+        document.getElementById('result').innerHTML = result;
+    }
+</script>
+
+</body>
+</html>
